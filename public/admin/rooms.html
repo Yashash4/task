@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin - Rooms</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="dot"></span> Task Manager</div>
+    <nav class="nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="users.html">Users</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="rooms.html" class="active">Rooms</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <h1 class="h1">Manage Rooms</h1>
+    <div class="grid cols-2">
+        <div class="card">
+            <h2>Create a New Room</h2>
+            <form id="createRoomForm">
+                <input id="roomName" placeholder="Room Name" class="input" required>
+                <button type="submit" class="btn">Create Room</button>
+            </form>
+        </div>
+        <div class="card">
+            <h2>Your Rooms</h2>
+            <div id="roomsList">Loading rooms...</div>
+        </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.0/dist/umd/supabase.min.js"></script>
+  <script src="../assets/js/lib/supabaseClient.js"></script>
+  <script src="../assets/js/admin/admin-rooms.js"></script>
+</body>
+</html>

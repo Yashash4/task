@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <title>Signup</title>
+    <link rel='stylesheet' href='assets/css/styles.css'>
+</head>
+<body>
+    <div class="wrap" style="max-width: 400px; margin-top: 5rem;">
+        <div class="card">
+            <h1 class="h1">Create Account</h1>
+            <form id='signupForm'>
+                <div class="toolbar" style="flex-direction: column;">
+                    <input id='username' placeholder="Username" class="input" required>
+                    <input id='email' type='email' placeholder="Email" class="input" required>
+                    <input id='password' type='password' placeholder="Password" class="input" required>
+                    <select id='role' class="select">
+                        <option value='user'>User</option>
+                        <option value='admin'>Admin</option>
+                    </select>
+                    <input id='roomCode' placeholder="Room Code (for users)" class="input">
+                    <button type='submit' class="btn">Create Account</button>
+                    <p>Already have an account? <a href="login.html">Log in</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.0/dist/umd/supabase.min.js"></script>
+    <script src='assets/js/lib/supabaseClient.js'></script>
+    <script src='assets/js/auth.js'></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin - Tasks</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="dot"></span> Task Manager</div>
+    <nav class="nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="users.html">Users</a>
+      <a href="tasks.html" class="active">Tasks</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <div class="grid cols-2">
+      <div class="card">
+        <h2 class="h1">Create Task</h2>
+        <form id="createTaskForm">
+          <div class="toolbar vertical">
+            <input id="taskTitle" placeholder="Task title" class="input" required />
+            <textarea id="taskDescription" placeholder="Description..." class="input" rows="3"></textarea>
+            <input id="taskDue" type="date" class="input" />
+            <select id="assignToUser" class="select"><option>Loading users...</option></select>
+            <button type="submit" class="btn">Create & Assign</button>
+          </div>
+        </form>
+      </div>
+      <div class="card">
+          <h2 class="h1">All Tasks</h2>
+          <div id="tasksArea">Loading tasks...</div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.0/dist/umd/supabase.min.js"></script>
+  <script src="../assets/js/lib/supabaseClient.js"></script>
+  <script src="../assets/js/admin/admin-tasks.js"></script>
+</body>
+</html>
